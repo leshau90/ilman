@@ -1,5 +1,5 @@
-var name = '';
-var peran = '';
+var name = 'ilman';
+var peran = 'singa';
 
 function excercise3(name, peran) {
     if (!name)

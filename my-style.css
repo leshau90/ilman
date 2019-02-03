@@ -3,18 +3,19 @@
 
 body {
     font-family: 'Merriweather', serif;
-    color:#212121;
-    
+    color: #212121;
+    box-sizing: border-box;
+
 }
 
 
 .parallax-one {
-   
+
     padding-top: 200px;
     padding-bottom: 200px;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     background-image: url(./imgs/parallax-1.png);
     background-attachment: fixed;
     background-size: cover;
@@ -22,23 +23,23 @@ body {
     -webkit-background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    
-    
+
+
 }
 
-.parallax-one h2{
+.parallax-one h2 {
     text-align: right;
-    height:60vh;
+    height: 60vh;
     font-size: 8vh;
 }
 
 .parallax-two {
-   
-    padding-top: 200px;
+
+    padding-top: 400px;
     padding-bottom: 200px;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     background-image: url(./imgs/parallax-2.png);
     background-attachment: fixed;
     background-size: cover;
@@ -46,62 +47,63 @@ body {
     -webkit-background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    
-    
+
+
 }
 
-.parallax-two h2{
+.parallax-two h2 {
     text-align: left;
-    height:60vh;
+    /* height: 60vh; */
     font-size: 8vh;
 }
 
 .title-grid {
     display: grid;
-    box-shadow: 3px 3px 5px 0px #ccc;
+    /* box-shadow: 3px 3px 5px 0px #ccc; */
     grid-template: repeat(5, 1fr)/1fr;
     font-size: 3vh;
     text-justify: center;
     text-align: center;
     font-weight: 800;
     height: 95vh;
-    width: 100%;
+    /* width: 100%; */
     padding: 3vh;
-    
-    background-color:#388e3c;
-    
+
+    background-color: #388e3c;
+
 
 }
 
 .content-grid {
-    background-color:#388e3c;
-    display: grid;
-    grid-template: 1fr/1fr 1fr;
-    width: 100%;
+    background-color: #388e3c;
+    display: flex;
+    
+    /* width: 100%; */
     justify-self: center;
-    padding:50px;
-    box-shadow: 3px 3px 5px 0px #ccc;
+    
+    /* box-shadow: 3px 3px 5px 0px #ccc; */
 }
 
 .description {
     font-size: 3vh;
     font-weight: 600;
     vertical-align: middle;
-    
     margin: 10vh;
-        
+    margin:20px;
+    flex-grow:1;
 }
 
 .illustration {
-    
+    flex-grow:1;
 }
 
-.illustration img{
-    height:100%;
-    width:100%;
-    border-radius: 2px;
-    padding-right: 10px;
+.illustration img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* padding-right: 10px; */
 }
+
 .title-head {
     grid-row-start: 1;
 
@@ -111,9 +113,6 @@ body {
     grid-row-start: 5;
 
 }
-
-
-
 
 .first-name:hover {
     color: lime;
