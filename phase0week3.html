@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            min-width: 400px;
+            font-family: 'Courier New', Courier, monospace;       
+            
+        }
+        .flex-container {
+            height: 100%;
+            width: 100%;
+    padding: 0;
+        margin: 0;    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        }
+        .standard {
+            min-width: 400px;
+            /* max-width: 800px; */
+            /* width: auto; */
+            justify-self: center;
+            align-self: center;
+            border: 2px dashed gray;
+            padding: 10px;
+            
+        }
+        .standard-noborder {
+            min-width: 400px;
+            max-width: 1000px;
+            /* width: auto; */
+            justify-self: center;
+            align-self: center;
+            padding: 5px;
+        }
+        .standard-noborder img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .tryIt {
+            background-color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 2px;
+        }
+        .welcome {
+            background-color:palegreen;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: fixed;
+            padding: 2px;
+            width: 100%;
+            height: 4em;
+            text-align: left;
+            display: flex;
+            left:0;
+            bottom:0;
+        }
+        .welcome ul li {
+            display: inline;
+            padding: 5px;
+        }
+        .welcome ul {
+            
+        }
+        .empty{
+            text-align: center;
+            height: 4em;
+        }
+        .navbar 
+        {  overflow: hidden;background-color:skyblue;position: fixed;top: 0; opacity: 50%;width: 100%;}
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="welcome">
+        <div>
+            <ul>
+                <li><a href="#home">phase-0-week-2</a></li>
+                <li><a href="#exercise-1">ex-1</a></li>
+                <li><a href="#exercise-2">ex-2</a></li>
+                <li><a href="#exercise-3">ex-3</a></li>
+                <li><a href="#exercise-4">ex-4</a></li>
+                <li><a href="#exercise-5">ex-5</a></li>
+                <li><a href="#exercise-6">ex-6</a></li>
+                <li><a href="#exercise-7">ex-7</a></li>
+                <li><a href="#exercise-8">ex-8</a></li>
+                <li><a href="#exercise-9">ex-9</a></li>
+                <li><a href="#exercise-10">ex-10</a></li>
+                <li><a href="#exercise-11">ex-11</a></li>
+                <li><a href="#exercise-12">ex-12</a></li>
+                <li><a href="#exercise-13">ex-13</a></li>
+                <li><a href="#reflections">reflections...</a></li>
+                <li><a href="./index.html">about me...</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="empty">
+        <a name="home"></a>
+        <h1> phase-0-week 2 </h1>
+    </div>
+
+    <p>..all text files are actually the .js files...that had been tested by, 'node [...js]', on command line to
+        have
+        the desired result</p>
+    <p>..it then modfied a little to fit the case of text-box inputs and button clicking for each exercise </p>
+
+    <div class="flex-container">
+
+        <a name="exercise-1"></a>
+        <div class="exercise">
+
+            <h2>exercise 1 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-main-pseudocode.md">
+                <h4>soal....</h4>
+            </a>
+            <div id='answerNum1' class='standard'>
+                <p>==================================<br />
+                    NUMBER 1<br />
+                    ==================================<br />
+                    STORE "massa" with any number<br />
+                    STORE "percepatan" with any number<br />
+                    CALCULATE "massa" times "percepatan", and SAVE as "resultan"<br />
+                    DISPLAY "resultan"</p>
+                <p><br />==================================<br />
+                    NUMBER 2<br />
+                    ==================================<br />
+                    STORE "tahun" with any number<br />
+                    CALCULATE "tahun" mod 4, and SAVE as "divisibleByFour"<br />CALCULATE "tahun"
+                    mod 100, and SAVE as "divisibleByOneHundred"<br />CALCULATE "tahun" mod 400, and SAVE as
+                    "divisibleByFourHundred"</p>
+                <p>IF ("divisibleByFour" == 0 AND "divisibleByOneHundred" != 0) <br />&nbsp;AND ( "divisibleByFour" ==
+                    0
+                    AND
+                    "divisibleByOneHundred" == 0 AND&nbsp; &nbsp;"divisibleByFourHundred" == 0)<br />&nbsp; DISPLAY
+                    `"tahun"
+                    adalah tahun kabisat` <br />ELSE<br />&nbsp; DISPLAY `"tahun" bukan tahun kabisat`</p>
+                <p><br />==================================<br />
+                    NUMBER 3<br />
+                    ==================================<br />
+                    STORE "clothesAmount" with 0 <br />STORE "clothesToBeWashed" to any number //or 20 as stated by the
+                    question</p>
+                <p>WHILE "clothesToBeWashed" &gt; 0<br />&nbsp; DO load one cloth to the machine<br />&nbsp; DO
+                    CALCULATE
+                    "clothesToBeWashed" - 1, and SAVE to "clothesToBeWashed"<br />&nbsp; DO CALCULATE "clothesAmount" +
+                    1,
+                    and
+                    SAVE to "clothesAmount"</p>
+                <p>IF "clothesAmount" != 0 <br />&nbsp; DISPLAY you'll be washing "clothesAmount" soon enough~!<br />&nbsp;
+                    DO
+                    turn on the washing machine<br />ELSE<br />&nbsp; DISPLAY no cloth to be washed, washing machine
+                    will
+                    stay
+                    off for the time being</p>
+                <p><br />==================================<br />NUMBER 4<br />==================================</p>
+                <p>//let's assume that each student is numbered uniquely,<br />
+                    //...so that, the teacher won't visit each student TWICE or
+                    more<br />//so there'll be a student number 1 and then number 2 etc. etc.<br />STORE
+                    "studentsAmount"
+                    with any number // or 40 as stated by the question</p>
+                <p>WHILE "studentsAmount" &gt; 0 <br />&nbsp; DO go to student number: "studentsAmount"<br />&nbsp; IF
+                    student
+                    has trimmed his/her nails<br />&nbsp; &nbsp; DO praise him/her<br />&nbsp; ELSE<br />&nbsp; &nbsp;
+                    DO
+                    punish him/her<br />&nbsp; DO CALCULATE "studentsAmount" -1, and SAVE to "studentsAmount" </p>
+            </div>
+            <code> </code>
+        </div>
+        <div class="exercise">
+            <a name="exercise-2"></a>
+            <h2>exercise 2 </h2>
+            <a href="https://www.codecademy.com/learn/learn-javascript">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum2' class='standard-noborder'>
+                <img src="./imgs/phase-0-week-3.png" alt="javascript basic buildding block">
+            </div>
+            <code> </code>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-3"></a>
+            <h2>exercise 3 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-menggunakan-if-else.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum3' class='standard'>
+                <div>
+                    <object data="./txts/exercise-3.js" type="text/plain" width="100%" style="height: 20em">
+
+                    </object>
+                    <a href="./txts/exercise-3.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <input type="text" id="input1-ex-3" placeholder="siapa nama anda?">
+                    <input type="text" id="input2-ex-3" placeholder="apa peran anda?">
+                    <button id="test-ex-3"> Try It</button>
+                    <p id="output-ex-3" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-4"></a>
+            <h2>exercise 4 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-switch-case.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum4' class='standard'>
+                <div>
+                    <object data="./txts/exercise-4.js" type="text/plain" width="100%" style="height: 20em">
+
+                    </object>
+                    <a href="./txts/exercise-4.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <input type="text" id="input1-ex-4" placeholder="tanggal">
+                    <input type="text" id="input2-ex-4" placeholder="bulan">
+                    <input type="text" id="input3-ex-4" placeholder="tahun">
+                    <button id="test-ex-4"> Try It</button>
+                    <p id="output-ex-4" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-5"></a>
+            <h2>exercise 5 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-main-string.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum5' class='standard'>
+                <div>
+                    <object data="./txts/exercise-5.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-5.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <h5>experimental... write any sentence, use space in-between-words of it...</h5>
+                    <input type="text" id="input1-ex-5" placeholder="write that sentence here...">
+                    <button id="test-ex-5"> Try It</button>
+                    <p id="output-ex-5" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-6"></a>
+            <h2>exercise 6 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-main-loop.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum6' class='standard'>
+                <div>
+                    <object data="./txts/exercise-6.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-6.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <input type="number" id="input1-ex-6" placeholder="initialization value...">
+                    <input type="number" id="input2-ex-6" placeholder="maximum value to increment...">
+                    <button id="test-ex-6"> Try It</button>
+                    <p id="output-ex-6" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-7"></a>
+            <h2>exercise 7 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-main-loop-asterisks.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum7' class='standard'>
+                <div>
+                    <object data="./txts/exercise-7.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-7.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h4>fill with number of levels, our asterix building will be....</h4>
+                    <input type="number" id="input1-ex-7" placeholder="how many levels, the asterix building should have...">
+                    <button id="test-ex-7"> Try It</button>
+                    <p id="output-ex-7" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-8"></a>
+            <h2>exercise 8 </h2>
+            <a href="https://www.codecademy.com/learn/learn-javascript">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum8' class='standard-noborder'>
+                <div>
+                    <img src="./imgs/phase-0-week-3.png" alt="javascript basic buildding block">
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-9"></a>
+            <h2>exercise 9 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-basic-function.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum9' class='standard'>
+                <div>
+                    <object data="./txts/exercise-9.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-9.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>try it....</h3>
+                    <button id="test-ex-9"> click to hear from me</button>
+                    <p id="output-ex-9" style="white-space: pre-line;"> </p>
+                    <h4>try multiplication....</h4>
+                    <input type="number" id="input1-ex-92" placeholder="a number ...">
+                    <input type="number" id="input2-ex-92" placeholder="multiplid by...">
+                    <button id="test-ex-92"> click to multiply...</button>
+                    <p id="output-ex-92" style="white-space: pre-line;"> </p>
+                    <h4>try, full sentence....</h4>
+                    <input type="text" id="input1-ex-93" placeholder="nama...">
+                    <input type="text" id="input2-ex-93" placeholder="umur...">
+                    <input type="text" id="input3-ex-93" placeholder="alamat...">
+                    <input type="text" id="input4-ex-93" placeholder="hobby...">
+                    <button id="test-ex-93"> Try It</button>
+                    <p id="output-ex-93" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-10"></a>
+            <h2>exercise 10 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-bandingkan-angka.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum10' class='standard'>
+                <div>
+                    <object data="./txts/exercise-10.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-10.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <input type="number" id="input1-ex-10" placeholder="angka pertama...">
+                    <input type="number" id="input2-ex-10" placeholder="angka kedua...">
+                    <button id="test-ex-10"> Try It</button>
+                    <p id="output-ex-10" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-11"></a>
+            <h2>exercise 11 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-balik-kata.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum11' class='standard'>
+                <div>
+                    <object data="./txts/exercise-11.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-11.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>write a word / sentence to reverse....</h3>
+                    <input type="text" id="input1-ex-11" placeholder="kata / kalimat yang akan dibalik...">
+                    <button id="test-ex-11"> Try It</button>
+                    <p id="output-ex-11" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise">
+            <a name="exercise-12"></a>
+            <h2>exercise 12 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-konversi-menit.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum12' class='standard'>
+                <div>
+                    <object data="./txts/exercise-12.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-12.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>you can try it below....</h3>
+                    <input type="number" id="input1-ex-12" placeholder="amount of seconds...">
+                    <button id="test-ex-12"> Try It</button>
+                    <p id="output-ex-12" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <a name="exercise-13"></a>
+            <h2>exercise 13 </h2>
+            <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/challenge-x-dan-o.md">
+                <h4>soal...</h4>
+            </a>
+            <div id='answerNum13' class='standard'>
+                <div>
+                    <object data="./txts/exercise-13.js" type="text/plain" width="100%" style="height: 20em">
+                    </object>
+                    <a href="./txts/exercise-13.js">to the text.....</a>
+                </div>
+                <div class='tryIt'>
+                    <h3>try it....xoxoxox</h3>
+                    <input type="text" id="input1-ex-13" placeholder="a word consisting of only x and o...">
+                    <button id="test-ex-13"> Try It</button>
+                    <p id="output-ex-13" style="white-space: pre-line;"> </p>
+                </div>
+            </div>
+        </div>
+        <div class="exercise">
+            <a name="reflections"></a>
+            <h2>reflections</h2>
+            <div class='tryIt'>
+                <p>N.B.~ this probably is a joke</p>
+                <p>A: hello there...</p>
+                <p>A: So what&rsquo;s new this week?</p>
+                <p>B: An introduction to javascript...</p>
+                <p>A: did you learn something new?</p>
+                <p>B: maybe...</p>
+                <p>A: is that all? What a unmemorable week...</p>
+                <p>B: maybe...</p>
+                <p>A: sigh...</p>
+                <p>B: what do you think about syntactic sugar? Like...everything, well i mean the lines of code can be
+                    written in just single line....is it a &lsquo;good practice&rsquo; to implement</p>
+                <p>A: it depends....on the people who&rsquo;ll be reading your code....</p>
+                <p>B: but i like it...because it can summarize a long-train of thought...sortin&rsquo; branching
+                    statements and functions declarations are just a start</p>
+                <p>&nbsp;A: so it hurts you to see the lines that is repeating over and over again...but it &lsquo;ll
+                    be a good remainder...</p>
+                <p>B: not exactly...but when i see it...it&rsquo;s like my head bangs itself to ward my monitor..</p>
+                <p>A: lol, it&rsquo;s up to you.....i hope whoever read your code have the aptitude</p>
+                <p>B:judgemental...you are, just who are you anyway...</p>
+                <p>A: i&rsquo;m you...btw</p>
+                <p>B: just...what...am i doing...</p>
+            </div>
+        </div>
+    </div>
+    <div class='empty'></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function exercise3(name, peran) {
+            if (!name)
+                return 'nama harus diisi';
+            else if (!peran)
+                return `halo ${name}, pilih peranmu dalam game`;
+            else if (peran.toLowerCase() === 'kesatria')
+                return ` Selamat datang di dunia proxytia, ${name}
+        halo ${peran} ${name}, kamu dapat menyerang dengan senjatamu`;
+            else if (peran.toLowerCase() === 'tabib')
+                return ` Selamat datang di dunia proxytia, ${name}
+        halo ${peran} ${name}, kamu akan membantu temanmu yang terluka`;
+            else if (peran.toLowerCase() === 'penyihir')
+                return ` Selamat datang di dunia proxytia, ${name}
+        halo ${peran} ${name}, ciptakan keajaiban yang membantu kemenanganmu`;
+            else
+                return ` Selamat datang di dunia proxytia, ${name}
+        hmm..  ${name} ternyata kamu suka berperan sebagai ${peran}....
+        tidak apalah, karena hidupmu adalah pilihanmu`;
+        }
+
+        function exercise4(tanggal, bulan, tahun) {
+            switch (bulan) {
+                case '1':
+                    return `${tanggal} Januari ${tahun}`;
+                    break;
+                case '2':
+                    return `${tanggal} Februari ${tahun}`;
+                    break;
+                case '3':
+                    return `${tanggal} Maret ${tahun}`;
+                    break;
+                case '4':
+                    return `${tanggal} April ${tahun}`;
+                    break;
+                case '5':
+                    return `${tanggal} Mei ${tahun}`;
+                    break;
+                case '6':
+                    return `${tanggal} Juni ${tahun}`;
+                    break;
+                case '7':
+                    return `${tanggal} Juli ${tahun}`;
+                    break;
+                case '8':
+                    return `${tanggal} Agustus ${tahun}`;
+                    break;
+                case '9':
+                    return `${tanggal} September ${tahun}`;
+                    break;
+                case '10':
+                    return `${tanggal} Oktober ${tahun}`;
+                    break;
+                case '11':
+                    return `${tanggal} November ${tahun}`;
+                    break;
+                case '12':
+                    return `${tanggal} Desember ${tahun}`;
+                    break;
+                default:
+                    return 'please write the correct number for the month';
+            }
+        }
+
+        function exercise5(sentence) {
+            var arrOfSenetenceWords = sentence.split(' ');
+            return arrOfSenetenceWords.reduce(((x, y, z, arr) => x = x +
+                    `word number: ${z+1} is "${arr[z]}" of the length, ${arr[z].length}\n`),
+                '');
+        }
+
+
+        function exercise6(initx, maximumx) {
+
+            var init = parseInt(initx);
+            var maximum = parseInt(maximumx);
+
+
+            if (init > maximum || !init || !maximum) {
+                return 'please fill in values with valid non-zero positive numbers only, with the first is no larger than the second';
+            }
+            //exercise 6-2
+
+            var result = '';
+            result += `frist LOOP, starting at... init + 1\n`
+            var index = init + 1;
+            for (; index <= maximum; index++) {
+                result += (`${index} - i love coding\n`);
+
+            }
+            index--;
+            result += `second LOOP, going back to 0 from... index - 1\n`
+            // result += '\n';
+            for (; index > 0; index--) {
+                result += `${index} - I will become a full stack developer\n`;
+
+            }
+            result += '\n';
+
+            // //exercise 6-3 part 1-2
+            result += `third LOOP, even or odd\n`
+            var index2 = init;
+            for (; index2 <= maximum; index2++) {
+                if (index2 % 2 == 0) result += `${index2} adalah GENAP\n`;
+                else result += `${index2} adalah GANJIL\n`;
+            }
+            result += '\n';
+            // //exercise 6-3 part 3-4
+            result += `fourth loop, the factor of 3, from init incremented by 2 at each step\n`
+            var index3 = init;
+            for (; index3 <= maximum; index3 += 2) {
+                if (index3 % 3 == 0) result += `${index3} adalah kelipatan 3\n`;
+            }
+            result += '\n';
+            result += `fifth loop, the factor of 6, from init incremented by 5 at each step\n`
+            index3 = init;
+            for (; index3 <= maximum; index3 += 5) {
+                if (index3 % 6 == 0) result += `${index3} adalah kelipatan 6\n`;
+            }
+            result += '\n';
+            result += `sixth loop, the factor of 10, from init incremented by 9 at each step\n`
+            index3 = init;
+            for (; index3 <= maximum; index3 += 9) {
+                if (index3 % 10 == 0) result += `${index3} adalah kelipatan 10`;
+            }
+            result += '\n';
+
+            return result;
+        }
+
+        function exercise7(maxx) {
+            var maxy = parseInt(maxx);
+
+            if (!maxy) {
+                return 'please fill in values with valid non-zero positive numbers only';
+            }
+
+            var result = '';
+            var idx = maxy;
+            for (; idx > 0; idx--) {
+                result += '*\n';
+            }
+            //exercise 7-2
+
+            idx = maxy;
+            var max = idx;
+
+            for (; idx > 0; idx--) {
+                let [u, star] = [0, ''];
+                while (u < max) {
+                    star += '*';
+                    u++;
+                }
+                result += `${star}\n`;
+            }
+
+            //exercise 7-3
+            idx = maxy;
+            var max2 = 0;
+
+            for (; max2 < idx; max2++) {
+                let [u, star] = [0, ''];
+                while (u < max2 + 1) {
+                    star += '*';
+                    u++;
+                }
+                result += `${star}\n`;
+            }
+            return result;
+        }
+
+        function exercise92(num1, num2) {
+            if (!parseInt(num1) || !parseInt(num2)) return 'please, enter positive integer numbers';
+
+            return num1 * num2;
+        }
+
+        function exercise9() {
+            return 'Hello Function!';
+        }
+
+        function exercise93(name, age, address, hobby) {
+            if (!name || !age || !address || !hobby) return `please fill all the fields`;
+            return `Nama saya ${name}, umur saya ${age} tahun, alamat saya di ${address}, dan saya punya hobby yaitu ${hobby}!`;
+        }
+
+        function exercise10(num1x, num2x) {
+            var angka1 = parseInt(num1x);
+            var angka2 = parseInt(num2x);
+
+            if (!Math.abs(angka1) || !Math.abs(angka2)) return `please enter valid number`;
+
+            return (angka1 < angka2) ? true : (angka1 > angka2) ? false : -1;
+        }
+
+        function exercise11(kata) {
+            let [result, i] = ['', kata.length - 1];
+            for (; i >= 0; i--) {
+                result += kata[i];
+            }
+            return result;
+        }
+
+        function exercise12(menit) {
+            if (!parseInt(menit)) return `please enter valid positive integer representing the amount of seconds `;
+            return `${Math.floor(menit/60)}:${(menit%60<10)?'0'+menit%60:menit%60}`;
+        }
+
+        function exercise13(str) {
+            // you can only write your code here!
+            let [i, j] = [0, 0];
+            while (i < str.length) {
+                (str[i] === 'x') ? j++ : (str[i] === 'o') ? j-- :
+                console.log(
+                    'WARNING: the result might be false..because there\'s a character other than lowercase x and o'
+                );
+                i++;
+            }
+            return j == 0;
+        }
+
+        //ui codes
+        $('#test-ex-3').click(
+            () => $('#output-ex-3').text(
+                exercise3($('#input1-ex-3').val(), $('#input2-ex-3').val())));
+        $('#test-ex-4').click(
+            () => $('#output-ex-4').text(
+                exercise4($('#input1-ex-4').val(), $('#input2-ex-4').val(), $('#input3-ex-4').val())));
+        $('#test-ex-5').click(
+            () => $('#output-ex-5').text(
+                exercise5($('#input1-ex-5').val())));
+        $('#test-ex-6').click(
+            () => $('#output-ex-6').text(
+                exercise6($('#input1-ex-6').val(), $('#input2-ex-6').val())));
+        $('#test-ex-7').click(
+            () => $('#output-ex-7').text(
+                exercise7($('#input1-ex-7').val())));
+        $('#test-ex-93').click(
+            () => $('#output-ex-93').text(
+                exercise93($('#input1-ex-93').val(), $('#input2-ex-93').val(), $('#input3-ex-93').val(), $(
+                    '#input4-ex-93').val())
+            ));
+        $('#test-ex-92').click(
+            () => $('#output-ex-92').text(
+                exercise92($('#input1-ex-92').val(), $('#input2-ex-92').val())));
+        $('#test-ex-9').click(
+            () => $('#output-ex-9').text(exercise9()));
+        $('#test-ex-10').click(
+            () => $('#output-ex-10').text(
+                exercise10($('#input1-ex-10').val(), $('#input2-ex-10').val())));
+        $('#test-ex-11').click(
+            () => $('#output-ex-11').text(
+                exercise11($('#input1-ex-11').val())));
+        $('#test-ex-12').click(
+            () => $('#output-ex-12').text(
+                exercise12($('#input1-ex-12').val())));
+        $('#test-ex-13').click(
+            () => $('#output-ex-13').text(
+                exercise13($('#input1-ex-13').val())));
+        //$('#answerNum1').text(answerNum1);
+    </script>
+
+
+</body>
+
+</html>
