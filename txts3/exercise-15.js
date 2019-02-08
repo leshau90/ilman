@@ -10,7 +10,7 @@ function groupAnimals(animals) {
       //console.log('intial: ',result)
     } else {
       x = returnRightGroupIndex(result, animals[i]);
-      
+      //the operation will either be pushing new element to a group or splicing and adding a group with a first member in it
       if (x == -1) {
         result.splice(whereToSplice(result, animals[i]), 0, [animals[i]]);
       } else {
