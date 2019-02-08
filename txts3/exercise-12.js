@@ -1,12 +1,12 @@
 function tentukanDeretGeometri(arr) {
-  let currDiff=arr[1]/arr[0];
-  let isItSameDiff=true;
-  for (let i = 2; i<arr.length;i++ ){
-      isItSameDiff=isItSameDiff&&(currDiff==(arr[i]/arr[i-1]));  
-      
+  let currDiff = arr[1] / arr[0];
+  let isItSameDiff = true;
+  for (let i = 2; i < arr.length; i++) {
+    isItSameDiff = isItSameDiff && (currDiff == (arr[i] / arr[i - 1]));
+
   }
   return isItSameDiff;
-  
+
 }
 
 // TEST CASES

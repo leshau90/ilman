@@ -1,6 +1,6 @@
 function cariMean(arr) {
   // you can only write your code here!]
-  let acc= 1;
+  let acc= 0;
   for (let index = 0; index < arr.length; index++) {
     acc+=arr[index];    
   }
