@@ -33,17 +33,20 @@ for (; index2 <= 100; index2++) {
 
 //exercise 6-3 part 3-4
 
-var index3 = 0;
+var index3 = 1;
+console.log('counter sekarang =',index3);
 for (; index3 <= 100; index3 += 2) {
-    if (index3 % 3 == 0) console.log(`${index3} adalah kelipatan 3`);
+    if (index3 % 3 == 0) console.log(`${index3} KELIPATAN 3`);
 }
 
-index3 = 0;
+index3 = 1;
+console.log('counter sekarang =', index3);
 for (; index3 <= 100; index3 += 5) {
-    if (index3 % 6 == 0) console.log(`${index3} adalah kelipatan 6`);
+    if (index3 % 6 == 0) console.log(`${index3} KELIPATAN 6`);
 }
 
-index3 = 0;
+index3 = 1;
+console.log('counter sekarang =',index3);
 for (; index3 <= 100; index3 += 9) {
-    if (index3 % 10 == 0) console.log(`${index3} adalah kelipatan 10`);
+    if (index3 % 10 == 0) console.log(`${index3} KELIPATAN 10`);
 }
