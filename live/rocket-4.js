@@ -44,14 +44,17 @@ OUTPUT:
 function printBranch(branches) {
     // your code is here
     let month  = ['jan', 'feb', 'march', 'april', 'mei', 'jun', 'jul', 'augst', 'sept', 'oct', 'nov', 'dec'];
+    let result = '';
     for (let i = 0; i < month.length; i++) {
         let lineRes = `| ${month[i]} |`;
         //`| ${} | Branch-1 IN: {income} OUTCOME: {outcome} | Branch-2 IN: {income} OUT{outcome} | Branch-3 IN: {income} OUT{outcome} |`
         for (let j = 0; j < branches.length; j++) {
             lineRes+=` Branch-${j+1} IN: ${branches[j][0][i]} OUT: ${branches[j][1][i]} |`;
         }
-        console.log(lineRes);        
+        //console.log(lineRes);        
+        result+=lineRes+'\n';
     }
+    return result;
   }
   
   //TEST CASE 1
