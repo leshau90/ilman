@@ -32,9 +32,9 @@ function MajoritySweeper(arr) {
     let tracker = [];
     
     for (let i = 0; i < arr.length; i++) {
-        
+        r
         for (let  j  = 0 ; j<result.length; j++){
-            
+
             } 
         }
     return result;

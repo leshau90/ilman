@@ -25,19 +25,29 @@ function favoriteColor(input) {
     if (input[i] == 'red') {
       tracker[0]++;
     }
-    if (input[i] == 'green') {
+    if (input[i] == 'yellow') {
       tracker[1]++;
     }
     if (input[i] == 'blue') {
       tracker[2]++;
     }
   }
-  let ix  = 0, iy= 0;
-  for (let i = 0; i < tracker.length; i++) {
-    if (x[x]){
+  let ix = 0,
+    iy = 0;
+  
+    ix = Math.max(tracker[0], tracker[1], tracker[2]);
+  
 
+  //no dominance
+  iy = 0;
+  for (let i = 0; i < tracker.length; i++) {
+    if (tracker[i]==ix){
+      iy++;
     }
   }
+
+  if (iy!=1) return 'there are no clear winner';
+  return ix;
 }
 
 console.log(favoriteColor(['red', 'red', 'yellow'])); // "red the most favorite!"
