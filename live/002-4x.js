@@ -28,20 +28,56 @@ OUTPUT: [1, 1, 1, 2, 2]
 
 function MajoritySweeper(arr) {
     // your code here
-    let result = [];
-    let tracker = [];
+    let result = '';
+    let t = [];
+    let maxOccurences= 1;
     
+    let strInput = arr.join('');
+    let mElem= strInput[0] ;
+    console.log(strInput);
     for (let i = 0; i < arr.length; i++) {
-        r
-        for (let  j  = 0 ; j<result.length; j++){
-
-            } 
+        if (t[strInput[i]] == undefined) {
+            t[strInput[i]] = 1;
+            //console.log(strInput[i], tracker[strInput[i]]);
+        } else {
+            t[strInput[i]]++;
+            //console.log(strInput[i], ':', t[strInput[i]]);
         }
-    return result;
+        
+        if (t[strInput[i]] > maxOccurences) {
+            mElem = strInput[i];
+            maxOccurences = t[strInput[i]];
+        }
+    }
+    result=strInput.split(mElem).join('');
+
+    
+    return result.split('');
 }
 
 
+
 console.log(MajoritySweeper([9, 1, 1, 1, 1, 1, 3, 3, 4, 2, 5, 5, 5])) // [ 9, 3, 3, 4, 2, 5, 5, 5 ]
-console.log(MajoritySweeper([22, 22, 100, 100, 100, 2000])) // [ 22, 22, 2000 ]
-console.log(MajoritySweeper([2, 2])) // []
-console.log(MajoritySweeper([4, 4, 4, 1, 1, 1, 2, 2])) // [ 1, 1, 1, 2, 2 ]
+// console.log(MajoritySweeper([22, 22, 100, 100, 100, 2000])) // [ 22, 22, 2000 ]
+// console.log(MajoritySweeper([2, 2])) // []
+// console.log(MajoritySweeper([4, 4, 4, 1, 1, 1, 2, 2])) // [ 1, 1, 1, 2, 2 ]
+
+function mode(array) {
+    if (array.length == 0)
+        return null;
+    var modeMap = {};
+    var maxEl = array[0],
+        maxCount = 1;
+    for (var i = 0; i < array.length; i++) {
+        var el = array[i];
+        if (modeMap[el] == null)
+            modeMap[el] = 1;
+        else
+            modeMap[el]++;
+        if (modeMap[el] > maxCount) {
+            maxEl = el;
+            maxCount = modeMap[el];
+        }
+    }
+    return maxEl;
+}
