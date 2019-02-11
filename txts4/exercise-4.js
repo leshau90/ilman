@@ -12,22 +12,22 @@ function cariModus(arr) {
     }
 
     //console.log(occurences, ' with current modus is ', currModus);
-    
+
 
     if (currModus == 1 || currModus == arr.length) {
         return -1;
-    } 
+    }
     //let's determine who's first
     for (let i = 0; arr.length > i; i++) {
         //console.log('is it true that .. ', occurences[`${arr[i]}`], currModus, occurences[`${arr[i]}`]==currModus);
-        if (occurences[`${arr[i]}`]==currModus) {
-        //console.log('Yes, then first one is this one: ', arr[i]);
+        if (occurences[`${arr[i]}`] == currModus) {
+            //console.log('Yes, then first one is this one: ', arr[i]);
             return arr[i];
         }
     }
 
 
-///    return -1;
+    ///    return -1;
 }
 
 // TEST CASES
