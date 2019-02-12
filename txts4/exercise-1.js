@@ -63,19 +63,19 @@ console.log(angkaPrima(100045)); // false
 // }
 
 
-function sumPrimes(num) {
-    let result=0,i=0;
-    for(;i<=num;i++){
-        //console.log('at the i of',i);
-        if (angkaPrima(i)){
-            //console.log('add ',result,i, ' towards num ' , num-i);
-            result+=i;}
+// function sumPrimes(num) {
+//     let result=0,i=0;
+//     for(;i<=num;i++){
+//         //console.log('at the i of',i);
+//         if (angkaPrima(i)){
+//             //console.log('add ',result,i, ' towards num ' , num-i);
+//             result+=i;}
   
-    }
-    //console.log(i);
-    return result;
-  }
+//     }
+//     //console.log(i);
+//     return result;
+//   }
   
-  console.log(sumPrimes(10));
+//   console.log(sumPrimes(10));
   
-  console.log(sumPrimes(977));//73156
+//   console.log(sumPrimes(977));//73156
