@@ -1,7 +1,7 @@
 function angkaPrima(angka) {
     // you can only write your code here!
 
-    if (angka == 1 || angka == 3) return true;
+    if (angka == 1 || angka == 3 || angka == 2 ) return true;
     if (angka % 2 == 0 || angka % 3 == 0) return false;
     else
         return traceBackNecessarily(Math.floor(angka / 2) - 1, angka);
@@ -14,7 +14,7 @@ function traceBackNecessarily(start, dividend) {
     for (; start > 1; start -= 2) {
         //console.log('dividend:'+ dividend + ' start to divide at '+ start);
         if (dividend % start == 0) {
-            //console.log('seems it can be devided by ..', start);
+            //console.log('seems like it can be divided by ..', start);
             return false;
         }
     }
