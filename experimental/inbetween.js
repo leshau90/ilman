@@ -6,7 +6,7 @@ function smallestCommons(arr) {
   let result = smallestCommonsR([min, min + 1]);
 
 
-  console.log('iterate over ',arr, ' first result is',result);
+  console.log('iterate over ', arr, ' first result is', result);
   for (let i = min + 2; i <= max; i++) {
     // console.log('argument to call: ', result, i);
     result = smallestCommonsR([result, i]);
@@ -28,7 +28,7 @@ function smallestCommonsR(arr) {
 
     if (i % min == 0 && i % max == 0) {
       found = true;
-      console.log('SEARCHING: got', i, '%', max,'or',min, ' has no reminder');
+      console.log('SEARCHING: got', i, '%', max, 'or', min, ' has no reminder');
 
     } else {
       found = false;
