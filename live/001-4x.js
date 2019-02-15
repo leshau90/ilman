@@ -19,35 +19,47 @@ Apabila ada jumlah yang sama dan jumlah tersebut merupakan jumlah terbesar, tamp
 
 function favoriteColor(input) {
   // your code here!
-  let result = ''
-  let tracker = [0, 0, 0];
+  console.log('-----------------')
+  let t = [0, 0, 0];
   for (let i = 0; i < input.length; i++) {
     if (input[i] == 'red') {
-      tracker[0]++;
+      t[0]++;
+    } else if (input[i] == 'blue') {
+      t[1]++;
+    } else if (input[i] == 'yellow') {
+      t[2]++;
     }
-    if (input[i] == 'yellow') {
-      tracker[1]++;
+
+  }
+  let result = [0];
+
+  for (let i = 1; i < t.length; i++) {
+
+    if (t[result[0]] == t[i]) {
+      result.push(i);
+    } else if (t[result[0]] < t[i]) {
+      // console.log(result[0] < t[i]);
+      result.length = 0;
+      result.push(i);
     }
-    if (input[i] == 'blue') {
-      tracker[2]++;
+    // console.log(result);
+  }
+
+  if (result.length >1) {
+    return "There are no favorite!";
+  }
+
+  if (result.length == 1) {
+    if (result[0] == 0) {
+      return `red is the most popular`;
+    }
+    if (result[0] == 1) {
+      return `blue is the most popular`;
+    }
+    if (result[0] == 2) {
+      return `yellow is the most popular`;
     }
   }
-  let ix = 0,
-    iy = 0;
-  
-    ix = Math.max(tracker[0], tracker[1], tracker[2]);
-  
-
-  //no dominance
-  iy = 0;
-  for (let i = 0; i < tracker.length; i++) {
-    if (tracker[i]==ix){
-      iy++;
-    }
-  }
-
-  if (iy!=1) return 'there are no clear winner';
-  return ix;
 }
 
 console.log(favoriteColor(['red', 'red', 'yellow'])); // "red the most favorite!"
