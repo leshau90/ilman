@@ -1,11 +1,21 @@
 function ubahHuruf(kata) {
     // you can only write your code here!
     let result = '';
+    let hash = 'abcdefghijklmnopqrstuvwxyz'
     for (let i = 0; kata.length > i; i++) {
         if (kata[i] == 'z') {
             result += 'a';
-        } else result += (String.fromCharCode(kata.charCodeAt(i) + 1));
-    }   
+        } else {
+            let next = kata[i];
+            //search and destroy
+            for (let j = 0; hash.length > j; j++) {
+                if (hash[j] == kata[i]) {
+                    result += hash[j + 1];
+                    break;
+                }
+            }            
+        }
+    }
     return result;
 }
 
