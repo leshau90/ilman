@@ -1,23 +1,41 @@
 function graduates(students) {
     // Code disini
-    let result = new Object();
+    let result={};
     for (let i = 0; i < students.length; i++) {
-        if (!result.hasOwnProperty(`${students[i].class}`)) {
-
-            result[`${students[i].class}`] = [];
-
+        if (!result[students[i].class]){
+            result[students[i].class] = [];
         }
-        if (students[i].score > 75) {
-
-            result[`${students[i].class}`].push({
+        if (students[i].score>75){
+            result[students[i].class].push({
                 name: students[i].name,
                 score: students[i].score
+
             });
         }
+
     }
     return result;
-
 }
+// function graduates(students) {
+//     // Code disini
+//     let result = new Object();
+//     for (let i = 0; i < students.length; i++) {
+//         if (!result.hasOwnProperty(`${students[i].class}`)) {
+
+//             result[`${students[i].class}`] = [];
+
+//         }
+//         if (students[i].score > 75) {
+
+//             result[`${students[i].class}`].push({
+//                 name: students[i].name,
+//                 score: students[i].score
+//             });
+//         }
+//     }
+//     return result;
+
+// }
 
 console.log(graduates([{
         name: 'Dimitri',
