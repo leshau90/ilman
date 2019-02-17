@@ -7,6 +7,7 @@ function cariMedian(arr) {
 
   }
   
+  
   // TEST CASES
   console.log(cariMedian([1, 2, 3, 4, 5])); // 3
   console.log(cariMedian([1, 3, 4, 10, 12, 13])); // 7

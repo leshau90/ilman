@@ -11,7 +11,9 @@ function digitPerkalianMinimum(angka) {
     for (; i <= half; i += j) {
         if (angka % i === 0)
             //factor is found choosing which is minimum
-            digitNum = Math.min(digitNum, calculateDigit(i, angka / i));
+            // digitNum = Math.min(digitNum, calculateDigit(i, angka / i));
+            digitNum =  (calculateDigit(i, angka / i)<digitNum)?calculateDigit(i, angka / i) : digitNum;
+            // Math.min(digitNum, calculateDigit(i, angka / i));
         //num % i === 0 ? str += ',' + i : false;
     }
 
