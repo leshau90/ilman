@@ -5,7 +5,7 @@ GET PRIMES
 
 Bilangan prima adalah sebuah bilangan dimana hanya bisa habis dibagi oleh angka 1 dan angka itu sendiri.
 Contoh:
-7 adalah bilangan prima, karena hanya habis dibagi angka 1 dan 11.
+7 adalah bilangan prima, karena hanya habis dibagi angka 1 dan 7.
 22 bukan bilangan prima, karena habis dibagi 1, 2, 11, dan 22.
 
 Deret bilangan prima
