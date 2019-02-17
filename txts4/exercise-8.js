@@ -1,3 +1,4 @@
+
 function tukarBesarKecil(kalimat) {
     if (kalimat == undefined || kalimat == '') return 'NO input';
     let result='';

@@ -5,7 +5,7 @@ function ubahHuruf(kata) {
         if (kata[i] == 'z') {
             result += 'a';
         } else result += (String.fromCharCode(kata.charCodeAt(i) + 1));
-    }
+    }   
     return result;
 }
 

@@ -1,4 +1,5 @@
 function fpb(angka1, angka2) {
+
     // you can only write your code here!
 
     var sisa = 0;
