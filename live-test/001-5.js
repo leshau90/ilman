@@ -47,12 +47,12 @@ WHILE i < 8
 
 function getPrime(num) {
     // your code here
-    if(num<=2) return [];
-    if(num==3) return [2];
-    let result = [2,3];
+    if (num <= 2) return [];
+    if (num == 3) return [2];
+    let result = [2, 3];
     let i = 4;
-    while (i<=num){
-        if(isPrime(i)){
+    while (i <= num) {
+        if (isPrime(i)) {
             result.push(i);
         }
 
@@ -63,10 +63,11 @@ function getPrime(num) {
 
     return result;
 }
-function isPrime(n){
+
+function isPrime(n) {
     for (let i = 2; i < n; i++) {
-        
-        if(n%i==0) return false;
+
+        if (n % i == 0) return false;
     }
     return true
 }
