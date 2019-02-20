@@ -55,8 +55,8 @@ function countDistance(arr, money) {
         (temp[i] == 'o' && start == -1) ? start = i: (temp[i] == 'o' && end == -1) ? end = i : null;
     }
     console.log(start, end);
-    if (start == 0) return 'you should start somewhere';
-    if (end == 0) return 'so you wanna go beyond limit..ckckc';
+    if (start == -1) return 'you should start somewhere';
+    if (end == -1) return 'so you wanna go beyond limit..ckckc';
 
     let midwayStop = -1;
     for (let i = start; i < end; i++) {
