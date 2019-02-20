@@ -26,8 +26,8 @@ function counterCharRecursive(input, search) {
     if (input.length == 0) {
         return 0;
     }
-    
-    return finder(input[0],search)+   counterCharRecursive(input.slice(1), search);;
+
+    return finder(input[0], search) + counterCharRecursive(input.slice(1), search);
 
 }
 
@@ -56,3 +56,44 @@ console.log(counterCharRecursive(['terima', 'kasih', 'sudah', 'selalu', 'berjuan
 
 // console.log(finder('k0o0ool', 'o'));
 // console.log(finder('ada', 'a'));
+
+console.log('=====one recursive function=====');
+function counterCharRecursiveOne(input, search) {
+    // console.log(input);
+    if (input[0].length == 0) {
+        // console.log('trimming=>',input);
+        input.shift()
+    }
+
+    if (input.length == 0) {
+        return 0;
+    }
+    let result = 0;
+    if (input[0][0] == search) {
+        result = 1;
+    }
+
+    return result + counterCharRecursiveOne([input[0].slice(1)].concat(input.slice(1)), search);
+
+}
+
+
+// function finder(elem, a) {
+//     // console.log(elem);
+//     if (elem.length == 0) {
+//         return 0;
+//     }
+//     let result = ((elem[0] == a) ? 1 : 0) + finder(elem.slice(1), a);
+//     // console.log(typeof result);
+//     return result;
+
+// }
+
+
+
+
+
+console.log(counterCharRecursiveOne(['ada', 'apa', 'ana', 'ada'], 'a')) // 8
+console.log(counterCharRecursiveOne(['xxxxoxoxoxoxoxoxxxooooo'], 'x')) // 12
+console.log(counterCharRecursiveOne(['b', 'o', 'l', 'd', 'f', 'o', 'x'], 'l')) // 1
+console.log(counterCharRecursiveOne(['terima', 'kasih', 'sudah', 'selalu', 'berjuang'], 's')) // 3```
