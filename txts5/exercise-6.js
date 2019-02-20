@@ -1,31 +1,20 @@
-function meleeRangedGrouping(str) {
-    //your code here
-    if (str == undefined || str == '') return [];
-    let splitted = str.split(',');
-    for (let i = 0; i < splitted.length; i++) {
-        splitted[i] = splitted[i].split('-');
-    }
-    let result = [
-        [],
-        []
-    ];
-    for (let i = 0; i < splitted.length; i++) {
+function attack(damage) {
+    // Code disini
+    return damage-2;
+}
 
-        if (splitted[i][1] == 'Ranged') {
-            result[0].push(splitted[i][0]);
-        } else if (splitted[i][1] == 'Melee') {
-            result[1].push(splitted[i][0]);
-        }
+function damageCalculation(numberOfAttacks, damagePerAttack) {
+    // Code disini
+    let result = 0;
+    for(let i = 0; i<numberOfAttacks;i++){
+        result+=attack(damagePerAttack);
     }
     return result;
 }
 
 // TEST CASE
+console.log(damageCalculation(9, 25)); // 207
 
-console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
-// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
+console.log(damageCalculation(10, 4)); // 20
 
-console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
-// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
-
-console.log(meleeRangedGrouping('')); // []
+console.log(damageCalculation(5, 20)); // 90

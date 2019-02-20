@@ -1,11 +1,12 @@
-function cariPelaku(str) {
-  // you can only write your code here!
-  return str.match(/abc/g).length;
-}
+function hapusSimbol(str) {
+    // you can only write your code here!
 
-// TEST CASES
-console.log(cariPelaku('mabcvabc')); // 2
-console.log(cariPelaku('abcdabdc')); // 1
-console.log(cariPelaku('bcabcac')); // 1
-console.log(cariPelaku('abcabcabc')); // 3
-console.log(cariPelaku('babcbacabc')); // 2
+    return str.replace(/[^\d\w]/g,'');
+  }
+  
+  // TEST CASES
+  console.log(hapusSimbol('test%$4aa')); // test4aa
+  console.log(hapusSimbol('devel0p3r s3j@@ati')); // devel0p3rs3jati
+  console.log(hapusSimbol('ma@#k!an~')); // makan
+  console.log(hapusSimbol('coding')); // coding
+  console.log(hapusSimbol('1+3-5*2=100')); // 1352100
