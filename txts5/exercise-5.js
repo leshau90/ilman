@@ -1,16 +1,16 @@
 function kaliNoLoopTerusRekursif(angka) {
   // you can only write your code here!
-  
+
   if (angka == 0) {
     return 0;
   }
   if (angka <= 9) {
     return angka;
   }
-  
-  let result = parseInt(`${angka}`[0]) * kaliNoLoopTerusRekursif(parseInt(`${angka}`.slice(1)));
-  
-  return (result<10)?result:kaliNoLoopTerusRekursif(result);
+
+  let result = parseInt(`${angka}` [0]) * kaliNoLoopTerusRekursif(parseInt(`${angka}`.slice(1)));
+
+  return (result < 10) ? result : kaliNoLoopTerusRekursif(result);
 }
 
 // TEST CASES
@@ -42,8 +42,8 @@ function kaliTerusRekursif(angka) {
   result = Math.floor(leftMostPart);
   //recursion on remaining number the leftmost without string-fy-ing
   result *= kaliTerusRekursif(angka - (result * (resultLevel / 10)));
-  
-  return (result<10)?result:kaliTerusRekursif(result);
+
+  return (result < 10) ? result : kaliTerusRekursif(result);
 }
 
 // TEST CASES
