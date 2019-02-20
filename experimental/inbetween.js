@@ -11,8 +11,6 @@ function smallestCommons(arr) {
     // console.log('argument to call: ', result, i);
     result = smallestCommonsR([result, i]);
   }
-
-
   return result;
 }
 

@@ -58,18 +58,18 @@ function countDistance(arr, money) {
     if (start == 0) return 'you should start somewhere';
     if (end == 0) return 'so you wanna go beyond limit..ckckc';
 
-    let prematureEj = -1;
+    let midwayStop = -1;
     for (let i = start; i < end; i++) {
         // (temp[i] == 'o' && start == -1) ? start = i: (temp[i] == 'o' && end == -1) ? end = i :null;
-        (temp[i] == 'x' && money >= 10000) ? money -= 10000: (money < 10000 && temp[i] == 'x') ? prematureEj = i : null;
+        (temp[i] == 'x' && money >= 10000) ? money -= 10000: (money < 10000 && temp[i] == 'x') ? midwayStop = i : null;
 
     }
 
 
 
-    if (prematureEj != -1) {
-        console.log(prematureEj,end);
-        return `Uang anda habis, jarak tersisa sampai tujuan adalah ${(end-prematureEj+1)*10} km`;
+    if (midwayStop != -1) {
+        console.log(midwayStop,end);
+        return `Uang anda habis, jarak tersisa sampai tujuan adalah ${(end-midwayStop+1)*10} km`;
     }
     else return `Sisa uang : ${money}, jarak tempuh: ${(end-start-1)*10} km`;
 }
