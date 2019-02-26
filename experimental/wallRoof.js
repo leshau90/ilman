@@ -8,7 +8,7 @@ function buildingSize(x) {
         result += 1 + Math.abs(x[i] - previous);
         previous = x[i];
     }
-    // result += (previous < 0) ? Math.abs(previous) : 0;
+    
     // explanation += `(${result})<= ${2 + Math.abs(0-previous)}<= 2 + abs(${0} - ${previous}) \n`;
     result += 2 + Math.abs(0 - previous);
     drawTheBuilding(x, result);
