@@ -6,7 +6,7 @@ function sorting(arrNumber) {
   for (let i = 1; i < arrNumber.length; i++) {
     for (let j = i; j > 0 && arrNumber[j - 1] > arrNumber[j]; j--) {
       [arrNumber[j - 1], arrNumber[j]] = [arrNumber[j], arrNumber[j - 1]];
-   //   console.log(arrNumber);
+      //   console.log(arrNumber);
     }
   }
   return arrNumber;
@@ -16,10 +16,10 @@ function getTotal(arrNumber) {
   // code di sini
   if (arrNumber.length == 0) return '';
   let counter = 0;
-  let max = arrNumber[arrNumber.length-1];
-  for(let i = arrNumber.length-1;i>=0;i--){
+  let max = arrNumber[arrNumber.length - 1];
+  for (let i = arrNumber.length - 1; i >= 0; i--) {
     //console.log('comparing',max, arrNumber[i] )
-    if (max == arrNumber[i]){
+    if (max == arrNumber[i]) {
       counter++;
     } else break;
   }

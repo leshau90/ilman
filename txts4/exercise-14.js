@@ -1,4 +1,5 @@
 function naikAngkot(arrPenumpang) {
+
     rute = ['A', 'B', 'C', 'D', 'E', 'F'];
     //your code here
     let result = [];
