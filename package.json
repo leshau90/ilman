@@ -1,0 +1,25 @@
+{
+  "name": "ilman",
+  "version": "1.0.0",
+  "description": "logbook",
+  "main": "jquery-3.3.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leshau90/ilman.git"
+  },
+  "keywords": [
+    "acta",
+    "non",
+    "verba"
+  ],
+  "author": "ilman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leshau90/ilman/issues"
+  },
+  "homepage": "https://github.com/leshau90/ilman#readme",
+  "dependencies": {}
+}
